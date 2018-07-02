@@ -12,7 +12,7 @@ def client():
 
 @pytest.fixture
 def database(client):
-    database = client.get_default_database()
+    database = client.get_database()
     yield database
     client.drop_database(database.name)
 
